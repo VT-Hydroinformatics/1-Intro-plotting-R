@@ -7,17 +7,15 @@ output: html_notebook
 
 ### Most of what we do below is discussed in more detail in the Data Visualization Chapter of R for Data Science. (<https://r4ds.had.co.nz/data-visualisation.html>)
 
-#### The version of this file with COMPLETE in the name has all the code we will write already there. This is in case you fall behind in class and skip a section. 
+#### The version of this file with COMPLETE in the name has all the code we will write already there. This is in case you fall behind in class and skip a section.
 
-#### We are starting with plotting because it'll give you some practice with the basic tenets of R, get you excited about what you can do, and will allow us to graphically represent some of the basic things we will do in the coming classes. So while it seems a little advanced to start with, it'll help us in the future. 
+#### We are starting with plotting because it'll give you some practice with the basic tenets of R, get you excited about what you can do, and will allow us to graphically represent some of the basic things we will do in the coming classes. So while it seems a little advanced to start with, it'll help us in the future.
 
 #### As we embark on this R journey, please read and take heed of the following quote from the R for Data Science book. It rings oh-so true.
 
-##### "Frustration is natural when you start programming in R, because it is 
-such a stickler for punctuation, and even one character out of place 
-will cause it to complain. But while you should expect to be a little 
-frustrated, take comfort in that it's both typical and temporary: it 
-happens to everyone, and the only way to get over it is to keep trying."
+##### "Frustration is natural when you start programming in R, because it is
+
+such a stickler for punctuation, and even one character out of place will cause it to complain. But while you should expect to be a little frustrated, take comfort in that it's both typical and temporary: it happens to everyone, and the only way to get over it is to keep trying."
 
 ## Download and install tidyverse library
 
