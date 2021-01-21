@@ -1,6 +1,8 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
 ## Download and install tidyverse library
@@ -145,8 +147,8 @@ If points are too close together to see them all you can use a hollow point type
 
 ```{r}
 
-ggplot(RBI, aes(RBI, DRAIN_SQKM, size = T_AVG_SITE, bg = STATE, alpha = 0.3))+
-  geom_point(pch = 21)
+ggplot(RBI, aes(RBI, DRAIN_SQKM, size = T_AVG_SITE, bg = STATE))+
+  geom_point(pch = 21, alpha = 0.3)
 
 ```
 
