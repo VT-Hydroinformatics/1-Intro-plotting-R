@@ -13,9 +13,7 @@ output: html_notebook
 
 #### As we embark on this R journey, please read and take heed of the following quote from the R for Data Science book. It rings oh-so true.
 
-##### "Frustration is natural when you start programming in R, because it is
-
-such a stickler for punctuation, and even one character out of place will cause it to complain. But while you should expect to be a little frustrated, take comfort in that it's both typical and temporary: it happens to everyone, and the only way to get over it is to keep trying."
+##### "Frustration is natural when you start programming in R, because it is such a stickler for punctuation, and even one character out of place will cause it to complain. But while you should expect to be a little frustrated, take comfort in that it's both typical and temporary: it happens to everyone, and the only way to get over it is to keep trying."
 
 ## Download and install tidyverse library
 
@@ -46,7 +44,7 @@ RBI <- read_csv("Flashy_Dat_Subset.csv")
 Let's look at the Pine data, plotting streamflow (the cfs column) by the date (datetime column). We will show the time series as a line.
 
 ```{r}
-
+theme_set(theme_classic())
 ```
 
 ## Change point type

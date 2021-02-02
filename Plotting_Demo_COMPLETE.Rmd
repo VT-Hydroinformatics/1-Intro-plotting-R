@@ -17,7 +17,7 @@ library(tidyverse)
 
 ```
 
-## Reading data 
+## Reading data
 
 The following lines will read in the data we will use for this exercise. Don't worry about this right now beyond running it, we will talk more about it later.
 
@@ -113,11 +113,11 @@ ggplot(data = SNP, aes(x = datetime,y = cfs)) +
   facet_wrap(facets = "StationID", nrow = 2)
 ```
 
-## Two variable faceting 
+## Two variable faceting
 
 You can also use facet_grid() to break your plots up into panels based on two variables. Below we will create a panel for each month in each watershed. Adding scales = "free" allows facet_grid to change the axes. By default, all axes will be the same. This is often what we want, so we can more easily compare magnitudes, but sometimes we are looking for patterns more, so we may want to let the axes have whatever range works for the individual plots.
 
-```{r}
+```{r echo=TRUE}
 ggplot(data = SNP, aes(x = datetime,y = cfs)) +
   geom_line() +
   facet_grid(StationID ~ month, scales = "free")
@@ -129,7 +129,7 @@ We can look at these data in other ways as well. A very useful way to look at th
 
 Because the data span several orders of magnitude, we will have to log the y axis to see the differences between the two streams. We do that by adding scale_y\_log10()
 
-```{r}
+```{r echo=TRUE}
 ggplot(data = SNP, aes(x = StationID, y = cfs)) + 
   stat_boxplot()+
   scale_y_log10()
@@ -145,7 +145,7 @@ If you use a point type that has a background, like \#21, you can also set the b
 
 If points are too close together to see them all you can use a hollow point type or set the alpha lower so the points are transparent (alpha = )
 
-```{r}
+```{r echo=TRUE}
 
 ggplot(RBI, aes(RBI, DRAIN_SQKM, size = T_AVG_SITE, bg = STATE))+
   geom_point(pch = 21, alpha = 0.3)
@@ -156,7 +156,7 @@ ggplot(RBI, aes(RBI, DRAIN_SQKM, size = T_AVG_SITE, bg = STATE))+
 
 Finally: You can add multiple geoms to the same plot. Examples of when you might want to do this are when you are showing a line fit and want to show the points as well, or maybe showing a boxplot and want to show the data behind it. You simply add additional geom\_... lines to add additional geoms.
 
-```{r}
+```{r echo=TRUE}
 
 ggplot(RBI, aes(RBI, DRAIN_SQKM, color = AGGECOREGION))+
   stat_smooth(method = "lm", linetype = 2)+
