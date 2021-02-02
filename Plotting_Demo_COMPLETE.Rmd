@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "Intro to Plotting"
 output:
   html_document:
     df_print: paged
