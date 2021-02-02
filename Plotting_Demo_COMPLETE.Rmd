@@ -27,7 +27,7 @@ SNP <- read_csv("PINE_NFDR_Jan-Mar_2010.csv")
 RBI <- read_csv("Flashy_Dat_Subset.csv")
 ```
 
-![Basic ggplot syntax](images/ggplot syntax-01.png "GGplot syntax")
+![Basic ggplot syntax](images/GGplot syntax.png "GGplot syntax")
 
 ## Our first ggplot
 
