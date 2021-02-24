@@ -1,19 +1,4 @@
----
-title: "Intro to Plotting"
-output: html_notebook
----
-
-## Introduction
-
-### Most of what we do below is discussed in more detail in the Data Visualization Chapter of R for Data Science. (<https://r4ds.had.co.nz/data-visualisation.html>)
-
-#### The version of this file with COMPLETE in the name has all the code we will write already there. This is in case you fall behind in class and skip a section.
-
-#### We are starting with plotting because it'll give you some practice with the basic tenets of R, get you excited about what you can do, and will allow us to graphically represent some of the basic things we will do in the coming classes. So while it seems a little advanced to start with, it'll help us in the future.
-
-#### As we embark on this R journey, please read and take heed of the following quote from the R for Data Science book. It rings oh-so true.
-
-##### "Frustration is natural when you start programming in R, because it is such a stickler for punctuation, and even one character out of place will cause it to complain. But while you should expect to be a little frustrated, take comfort in that it's both typical and temporary: it happens to everyone, and the only way to get over it is to keep trying."
+# Intro to Plotting {#Plotting}
 
 ## Download and install tidyverse library
 
@@ -37,21 +22,21 @@ SNP <- read_csv("PINE_NFDR_Jan-Mar_2010.csv")
 RBI <- read_csv("Flashy_Dat_Subset.csv")
 ```
 
-![Basic ggplot syntax](images/ggplot syntax-01.png "GGplot syntax")
+![Basic ggplot syntax](images/GGplot syntax.png "GGplot syntax")
 
 ## Our first ggplot
 
 Let's look at the Pine data, plotting streamflow (the cfs column) by the date (datetime column). We will show the time series as a line.
 
 ```{r}
-theme_set(theme_classic())
+
 ```
 
 ## Change point type
 
 Now let's make the same plot but show the data as points, using the pch parameter in geom_point() we can change the point type to any of the following:
 
-![R has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the \`colour\` and \`fill\` aesthetics. The hollow shapes (0--14) have a border determined by \`colour\`; the solid shapes (15--20) are filled with \`colour\`; the filled shapes (21--24) have a border of \`colour\` and are filled with \`fill\`.](https://d33wubrfki0l68.cloudfront.net/e28a1b57b6622cf67fd8a7e01c6a9955914f8fe9/635be/visualize_files/figure-html/shapes-1.png)
+![pch options from R help file](images/pch.png "pch values and points from R help file")
 
 ```{r}
 
@@ -61,7 +46,7 @@ Now let's make the same plot but show the data as points, using the pch paramete
 
 We can also "easily" change the color. Easily is in quotes because this often trips people up. If you put color = "blue" in the aesthetic function, think about what that is telling ggplot. It says "control the color using "blue"". That doesn't make a whole lot of sense, so neither does the output... Try it.
 
-What happens is that if color = "blue" is in the aesthetic, ggplot creates a new column of data, basically, and fills it with "blue". So it is like you had a column in your data filled with the value "blue". So it uses that data, and sets the color equal to the first default color in the ggplot color palette, which is red. It kind of feels like R is trolling you... doesn't it.
+What happens is that if color = "blue" is in the aesthetic, you are telling R that the color used in the geom represents "blue". This is very useful if you have multiple geoms in your plot, are coloring them differently, and are building a legend. But if you are just trying to color the points, it kind of feels like R is trolling you... doesn't it?
 
 Take the color = "blue" out of the aesthetic and you're golden.
 
@@ -111,7 +96,7 @@ You must tell the facet_wrap what variable to use to make the separate panels (f
 
 You can also use facet_grid() to break your plots up into panels based on two variables. Below we will create a panel for each month in each watershed. Adding scales = "free" allows facet_grid to change the axes. By default, all axes will be the same. This is often what we want, so we can more easily compare magnitudes, but sometimes we are looking for patterns more, so we may want to let the axes have whatever range works for the individual plots.
 
-```{r}
+```{r echo=TRUE}
 
 ```
 
@@ -121,7 +106,7 @@ We can look at these data in other ways as well. A very useful way to look at th
 
 Because the data span several orders of magnitude, we will have to log the y axis to see the differences between the two streams. We do that by adding scale_y\_log10()
 
-```{r}
+```{r echo=TRUE}
 
 ```
 
@@ -135,7 +120,7 @@ If you use a point type that has a background, like \#21, you can also set the b
 
 If points are too close together to see them all you can use a hollow point type or set the alpha lower so the points are transparent (alpha = )
 
-```{r}
+```{r echo=TRUE}
 
 ```
 
@@ -143,6 +128,6 @@ If points are too close together to see them all you can use a hollow point type
 
 Finally: You can add multiple geoms to the same plot. Examples of when you might want to do this are when you are showing a line fit and want to show the points as well, or maybe showing a boxplot and want to show the data behind it. You simply add additional geom\_... lines to add additional geoms.
 
-```{r}
+```{r echo=TRUE}
 
 ```

@@ -1,9 +1,4 @@
----
-title: "Intro to Plotting"
-output:
-  html_document:
-    df_print: paged
----
+# Intro to Plotting {#Plotting}
 
 ## Download and install tidyverse library
 
@@ -42,7 +37,7 @@ ggplot(data = Pine, aes(x = datetime, y = cfs))+
 
 Now let's make the same plot but show the data as points, using the pch parameter in geom_point() we can change the point type to any of the following:
 
-![R has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the \`colour\` and \`fill\` aesthetics. The hollow shapes (0--14) have a border determined by \`colour\`; the solid shapes (15--20) are filled with \`colour\`; the filled shapes (21--24) have a border of \`colour\` and are filled with \`fill\`.](https://d33wubrfki0l68.cloudfront.net/e28a1b57b6622cf67fd8a7e01c6a9955914f8fe9/635be/visualize_files/figure-html/shapes-1.png)
+![pch options from R help file](images/pch.png "pch values and points from R help file")
 
 ```{r}
 ggplot(data = Pine, aes(x = datetime, y = cfs))+
@@ -53,7 +48,7 @@ ggplot(data = Pine, aes(x = datetime, y = cfs))+
 
 We can also "easily" change the color. Easily is in quotes because this often trips people up. If you put color = "blue" in the aesthetic function, think about what that is telling ggplot. It says "control the color using "blue"". That doesn't make a whole lot of sense, so neither does the output... Try it.
 
-What happens is that if color = "blue" is in the aesthetic, ggplot creates a new column of data, basically, and fills it with "blue". So it is like you had a column in your data filled with the value "blue". So it uses that data, and sets the color equal to the first default color in the ggplot color palette, which is red. It kind of feels like R is trolling you... doesn't it.
+What happens is that if color = "blue" is in the aesthetic, you are telling R that the color used in the geom represents "blue". This is very useful if you have multiple geoms in your plot, are coloring them differently, and are building a legend. But if you are just trying to color the points, it kind of feels like R is trolling you... doesn't it?
 
 Take the color = "blue" out of the aesthetic and you're golden.
 
