@@ -1,3 +1,10 @@
+---
+title: "Plotting Demo"
+format:
+  html: 
+    self-contained: true
+---
+
 # Intro to Plotting {#Plotting}
 
 Get this document and a version with empty code chunks at the template repository on github: <https://github.com/VT-Hydroinformatics/1-Intro-plotting-R>
