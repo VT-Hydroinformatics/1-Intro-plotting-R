@@ -41,7 +41,14 @@ The following lines will read in the data we will use for this exercise. Don't w
 
 ```{r}
 Pine <- read_csv("PINE_Jan-Mar_2010.csv") 
+```
+
+```{r}
 SNP <- read_csv("PINE_NFDR_Jan-Mar_2010.csv")
+
+```
+
+```{r}
 RBI <- read_csv("Flashy_Dat_Subset.csv")
 ```
 
