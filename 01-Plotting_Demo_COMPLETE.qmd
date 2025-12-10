@@ -1,5 +1,5 @@
 ---
-title: "Chapter 1: Plotting Demo"
+title: "Plotting Demo"
 date: today
 github: https://github.com/VT-Hydroinformatics/1-Intro-plotting-R
 author:
@@ -15,6 +15,8 @@ format:
     self-contained: true
   ipynb:
       nb-frontmatter: true
+jupyter: 
+  kernel: ir
 execute: 
   enabled: true
 ---
@@ -41,14 +43,7 @@ The following lines will read in the data we will use for this exercise. Don't w
 
 ```{r}
 Pine <- read_csv("PINE_Jan-Mar_2010.csv") 
-```
-
-```{r}
 SNP <- read_csv("PINE_NFDR_Jan-Mar_2010.csv")
-
-```
-
-```{r}
 RBI <- read_csv("Flashy_Dat_Subset.csv")
 ```
 
