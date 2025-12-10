@@ -1,5 +1,5 @@
 ---
-title: "Plotting Demo"
+title: "Chapter 1: Plotting Demo"
 date: today
 github: https://github.com/VT-Hydroinformatics/1-Intro-plotting-R
 author:
