@@ -1,11 +1,11 @@
 ---
 title: "Chapter 1: Plotting Demo"
 date: today
-github: https://github.com/VT-Hydroinformatics/1-Intro-plotting-R
+repo-url: https://github.com/VT-Hydroinformatics/1-Intro-plotting-R
+repo-action: [source, edit]
 author:
   - name: JP Gannon
     orcid: 0000-0002-4595-3214
-    github: jpgannon
     url: https://jpgannon.github.io/
     affiliation: 
       - name: Virginia Tech
@@ -14,9 +14,10 @@ format:
   html: 
     self-contained: true
   ipynb:
-      nb-frontmatter: true
-jupyter: 
-  kernel: ir
+    nb-frontmatter: true
+    jupyter:
+      kernel: ir
+      ipynb-shell-interactivity: all
 execute: 
   enabled: true
 ---
@@ -47,11 +48,7 @@ SNP <- read_csv("PINE_NFDR_Jan-Mar_2010.csv")
 RBI <- read_csv("Flashy_Dat_Subset.csv")
 ```
 
-::: {#fig-ggplot-syntax .captioned-figure}
-<img src="./images/GGplot_syntax.png" alt="Basic ggplot syntax" width="1000">
-
-Basic ggplot syntax
-:::
+![Basic ggplot syntax](images/GGplot_syntax.png "GGplot syntax")
 
 ## Our first ggplot
 
@@ -66,11 +63,9 @@ ggplot(data = Pine, aes(x = datetime, y = cfs))+
 
 Now let's make the same plot but show the data as points, using the pch parameter in geom_point() we can change the point type to any of the following:
 
-::: {#fig-pch-reference .captioned-figure}
-<img src="./images/pch.png" alt="R pch options from R help file" width="1000">
 
-R pch options from R help file
-:::
+![pch options from R help file](images/pch.png "pch values and points from R help file")
+
 
 ```{r}
 ggplot(data = Pine, aes(x = datetime, y = cfs))+
