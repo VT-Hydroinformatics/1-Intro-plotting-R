@@ -8,6 +8,9 @@ author:
     affiliation: 
       - name: Virginia Tech
         url: https://www.vt.edu/
+repository: 
+  url: https://github.com/VT-Hydroinformatics/1-Intro-plotting-R
+  branch: master
 format:
   html: 
     self-contained: true
