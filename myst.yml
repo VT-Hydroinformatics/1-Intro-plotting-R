@@ -1,7 +1,7 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  id: 01-plotting-demo
+  id: hydro-plotting-demo
   title: "Chapter 1: Plotting Demo"
   authors:
     - id: jpgannon
@@ -18,5 +18,3 @@ project:
   license:
     content: CC-BY-4.0
     code: MIT
-site:
-  template: book-theme
