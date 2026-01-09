@@ -1,0 +1,22 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 01-plotting-demo
+  title: "Chapter 1: Plotting Demo"
+  authors:
+    - id: jpgannon
+      name: JP Gannon
+      orcid: 0000-0002-4595-3214
+      corresponding: true
+      email: jpgannon@vt.edu
+      github: jpgannon
+  github: https://github.com/abnerbog/1-Intro-plotting-R
+  date: 2025-01-09
+  toc:
+    - file: 01-Plotting_Demo_COMPLETE.ipynb
+  open_access: true
+  license:
+    content: CC-BY-4.0
+    code: MIT
+site:
+  template: book-theme
