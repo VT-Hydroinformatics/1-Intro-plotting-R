@@ -46,16 +46,7 @@ SNP <- read_csv("PINE_NFDR_Jan-Mar_2010.csv")
 RBI <- read_csv("Flashy_Dat_Subset.csv")
 ```
 
-```
-{figure} images/GGplot_syntax.png
-:alt: Graphic for ggplot syntax
-
-
-GGplot syntax
-```
-
-![GGplot syntax](images/GGplot_syntax.png)
-
+![GGplot syntax](images/GGplot_syntax.png "GGplot syntax")
 
 ## Our first ggplot
 
@@ -70,11 +61,7 @@ ggplot(data = Pine, aes(x = datetime, y = cfs))+
 
 Now let's make the same plot but show the data as points, using the pch parameter in geom_point() we can change the point type to any of the following:
 
-:::{figure} images/pch.png
-![](images/pch.png)
-
-Pch values and points from R help file
-:::
+![pch values and points from R help file](images/pch.png "pch values and points from R help file")
 
 ```{r}
 ggplot(data = Pine, aes(x = datetime, y = cfs))+
