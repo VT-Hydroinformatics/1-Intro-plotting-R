@@ -54,7 +54,7 @@ RBI <- read_csv("Flashy_Dat_Subset.csv")
 GGplot syntax
 ```
 
-![](images/GGplot_syntax.png)
+![GGplot syntax](images/GGplot_syntax.png)
 
 
 ## Our first ggplot
