@@ -1,5 +1,5 @@
 ---
-title: "Plotting Demo"
+title: "Chapter 1: Plotting Demo"
 date: today
 author:
   - name: JP Gannon
