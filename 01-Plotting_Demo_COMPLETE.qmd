@@ -13,14 +13,14 @@ format:
     self-contained: false
   ipynb:
     nb-frontmatter: true
-jupyter:
-  kernel: ir
-  ipynb-shell-interactivity: all
+    jupyter:
+      kernel: ir
+      ipynb-shell-interactivity: all
 execute: 
   enabled: true
 ---
 
-# Intro to Plotting {#Plotting}
+# Intro to Plotting
 
 Get this document and a version with empty code chunks at the template repository on github: <https://github.com/VT-Hydroinformatics/1-Intro-plotting-R>
 
@@ -53,7 +53,6 @@ RBI <- read_csv("Flashy_Dat_Subset.csv")
 ```
 
 ![GGplot syntax](images/GGplot_syntax.png "GGplot syntax")\
-
 
 ## Our first ggplot
 
