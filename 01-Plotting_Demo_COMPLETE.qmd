@@ -11,6 +11,11 @@ author:
 format:
   html: 
     self-contained: false
+  ipynb:
+    nb-frontmatter: true
+jupyter:
+  kernel: ir
+  ipynb-shell-interactivity: all
 execute: 
   enabled: true
 ---
@@ -37,11 +42,17 @@ The following lines will read in the data we will use for this exercise. Don't w
 
 ```{r}
 Pine <- read_csv("PINE_Jan-Mar_2010.csv") 
+```
+
+```{r}
 SNP <- read_csv("PINE_NFDR_Jan-Mar_2010.csv")
+```
+
+```{r}
 RBI <- read_csv("Flashy_Dat_Subset.csv")
 ```
 
-![GGplot syntax](./images/GGplot_syntax.png){#fig-ggplot-syntax}
+![GGplot syntax](images/GGplot_syntax.png "GGplot syntax")\
 
 
 ## Our first ggplot
@@ -57,7 +68,7 @@ ggplot(data = Pine, aes(x = datetime, y = cfs))+
 
 Now let's make the same plot but show the data as points, using the pch parameter in geom_point() we can change the point type to any of the following:
 
-![pch values and points from R help file](./images/pch.png "pch values and points from R help file")
+![pch values and points from R help file](images/pch.png "pch values and points from R help file")\
 
 ```{r}
 ggplot(data = Pine, aes(x = datetime, y = cfs))+
