@@ -12,7 +12,6 @@ format:
   html: 
     self-contained: false
   ipynb:
-    embed-resources: false
     nb-frontmatter: true
     jupyter:
       kernel: ir
@@ -72,6 +71,7 @@ Now let's make the same plot but show the data as points, using the pch paramete
 ![](images/pch.png "pch values and points from R help file")
 
 _pch values and points from R help file_
+
 
 ```{r}
 ggplot(data = Pine, aes(x = datetime, y = cfs))+
